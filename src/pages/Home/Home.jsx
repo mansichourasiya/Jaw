@@ -1,15 +1,14 @@
 import React, { useEffect,useState } from 'react';
 import { motion } from 'framer-motion';  
-// import homeimg from "../../assets/home-img.jpg";
+
 import homeimg from "../../assets/banner_img.jpeg";
 
 import video from "../../assets/GRAPHICS.mp4";
-import bg_img from "../../assets/bg_img2.jpg"
+
 import { useRef } from 'react';
 
 export default function Home() {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isScrollerout,setIsScrollerout] = useState(false);
+
   
   const ref = useRef()
   useEffect(() => {
@@ -35,7 +34,7 @@ export default function Home() {
   return (
     <div
     ref={ref}
-    className="w-full h-screen relative"
+    className="w-full min-`h-screen relative bg-red-50"
     >
 
       <motion.div 
@@ -44,7 +43,7 @@ export default function Home() {
         animate={{ opacity: 1 }} 
         transition={{ duration: 1 }} 
       >
-    
+    {/* <div className='w-full h-full bg-red-200'></div> */}
         <img src={homeimg} alt="Banner" className="w-full h-full object-cover absolute top-0 left-0 z-0" />
         
         <div className="relative w-full h-full z-10 flex flex-col justify-center items-start   text-white px-6 md:px-12 py-20 md:py-32">
@@ -76,18 +75,17 @@ export default function Home() {
         </div>
       </motion.div>
 
+
 <div 
-// style={
-//   isScrolled ? { backgroundImage:`url(${bg_img})`, backgroundSize: 'cover',backgroundRepeat:"no-repeat", backgroundPosition: 'center', transition:"4s"} : {}
-// }
-className="h-auto flex flex-wrap justify-center items-center gap-6 sm:gap-8 md:gap-10 lg:gap-12">
+className="h-auto flex flex-wrap justify-center items-center gap-6 sm:gap-8 md:gap-10 lg:gap-12"
+>
     
-   
+    
     <motion.div 
       className="flex flex-col md:flex-row items-center gap-10 justify-between m-5 w-full"
       initial={{ opacity: 0, x: -100 }}
       animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.5 }}  
     >
       <div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/2 gap-5 h-96 rounded-sm">
         <img 
@@ -196,7 +194,7 @@ className="h-auto flex flex-wrap justify-center items-center gap-6 sm:gap-8 md:g
   </div> 
 
   <motion.div className="w-full p-6 sm:p-8 md:p-10 lg:p-12">
-  <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-light leading-relaxed text-white">
+  <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-light leading-relaxed text-blue-950">
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ipsum dolorem itaque laboriosam doloribus, quis nulla sint nostrum officia ullam expedita, laudantium, similique fugiat odit deserunt id quae. Et autem voluptate nostrum mollitia? Quisquam quae facere, ipsum odit quibusdam neque.
   </h3>
 </motion.div>
